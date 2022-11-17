@@ -1,0 +1,36 @@
+/*=================== font ===================*/
+@import url('https://webfontworld.github.io/heiroflight/HeirofLight.css');
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*=================== common ===================*/
+html {
+  font-size: 16px;
+}
+body {
+    font-family: 'HeirofLight' ,sans-serif;
+    font-weight: 300;
+    background: $mainColor;
+}
+.inner {
+  margin: 0 10px;
+  position: relative;
+  .closeBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    padding: 0.5rem;
+  }
+}
+.bar {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}

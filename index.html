@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일정관리앱</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+  <!-- font awesome script (cdn) -->
+  <script src="https://kit.fontawesome.com/da8c886e38.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="plugin/jQeury/jquery-ui.css" />
+  <script src="plugin/jQeury/jquery-3.6.0.min.js"></script>
+  <script src="plugin/jQeury/jquery-ui.js"></script>
+
+  <!-- db.json -->
+  <script src="./db/db.json" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- jQuery script
+  <script src="plugin/jQeury/jquery-3.6.0.min.js"></script>
+
+  jQuery UI script and stylesheet
+  <script src="plugin/jQeury/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="plugin/jQeury/jquery-ui.min.css"> -->
+
+  <script defer src="./js/loadCalandar.js"></script>
+  <script defer src="./js/addDBtem.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/layout.js"></script>
+</head>
+<body>
+  <div id="mobileContainer">
+    <header>
+      <div class="inner">
+        <h1>
+          <img src="./assets/img/headerPoint.png">
+          <span>나의 시간</span>
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div class="year-month">
+
+        </div>
+        <section id="calendar">
+          <ul class="days">
+            <li class="day">일</li>
+            <li class="day">월</li>
+            <li class="day">화</li>
+            <li class="day">수</li>
+            <li class="day">목</li>
+            <li class="day">금</li>
+            <li class="day">토</li>
+          </ul>
+          <ul class="dates">
+          </ul>
+        </section>
+        <span class="bar"><img src="./assets/img/line.png"></span>
+        <section id="contentsBtn">
+          <article class="day">
+            <div class="title">
+              <h2>오늘의 일정</h2>
+              <button>+</button>
+            </div>
+            <ul class="contents">
+              <li>오늘 일정은 없습니다.</li>
+            </ul>
+          </article>
+          <article class="d-day">
+            <div class="title">
+              <h2>D-day</h2>
+              <button>+</button>
+            </div>
+            <ul class="contents">
+              <li>❤종강<span>d-72</span></li>
+            </ul>
+          </article>
+          <article class="timeTable">
+            <div class="title">
+              <h2>타임테이블</h2>
+              <button>+</button>
+            </div>
+            <ul class="contents">
+              <li>코딩<span>03:28:12</span></li>
+            </ul>
+          </article>
+          <article class="todoList">
+            <h2>Todo List</h2>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="inner">
+        <button id="timerBtn"><img src="./assets/img/logoClock-bright.png" alt="타이머 오픈"></button>
+      </div>
+    </footer>
+  </div>
+  <div id="todayPage">
+    <div class="inner">
+      <button class="closeBtn">X</button>
+    </div>
+  </div>
+  <div id="d-dayPage">
+    <div class="inner">
+      <button class="closeBtn">X</button>
+      <Section class="d-daySection">
+        <h2>D-day</h2>
+        <ul class="d-dayList">
+          <li id="d-dayItem01">
+            <h3>수능</h3>
+            <span>d-2</span>
+            <button class="deleteD-day">휴지통</button>
+          </li>
+          <li id="d-dayItem02">
+            <h3>크리스마스</h3>
+            <span>d-40</span>
+            <button class="deleteD-day">휴지통</button>
+          </li>
+        </ul>
+      </Section>
+      <button id="addD-dayItemBtn">추가하기</button>
+      <article id="d-dayPopup">
+        <h2>D-day</h2>
+        <form action="">
+          <input type="text" id="d-dayTitle" placeholder="제목 입력" autocomplete="off">
+          <hr>
+          <div class="wrap">
+            <label for="d-dayDatepicker"><img src="./assets/img/iconCalendar.svg" alt="d-day 날짜 선택"></label>
+            <input type="text" id="d-dayDatepicker" autocomplete="off" placeholder="d-day 날짜 선택">
+          </div>
+        </form>
+      </article>
+    </div>
+  </div>
+  <div id="todoListPage">
+    <div class="inner">
+      <button class="closeBtn">X</button>
+    </div>
+  </div>
+  <div id="timeTablePage">
+    <div class="inner">
+      <button class="closeBtn">X</button>
+    </div>
+  </div>
+  <aside>
+    <div id="enterPage">
+      <div class="logo">
+        <img src="./assets/img/logoClock.png" alt="나의 시간">
+        <div class="backBubble">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <h1><img src="./assets/img/title.png" alt="나의 시간 - 일정관리앱"></h1>
+    </div>
+  </aside>
+</body>
+</html>

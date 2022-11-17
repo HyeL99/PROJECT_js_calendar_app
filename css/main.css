@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/*=================== reset ===================*/
+@import url("https://webfontworld.github.io/heiroflight/HeirofLight.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #354463;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; /*기본크기로 16px*/
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+}
+
+input {
+  outline: 0;
+}
+
+/*=================== variable ===================*/ /*=================== mixin ===================*/ /*=================== font ===================*/
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*=================== common ===================*/
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "HeirofLight", sans-serif;
+  font-weight: 300;
+  background: #E9D5DA;
+}
+
+.inner {
+  margin: 0 10px;
+  position: relative;
+}
+.inner .closeBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+.bar {
+  width: 100%;
+}
+.bar img {
+  width: 100%;
+}
+
+/*=================== index ===================*/
+#enterPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #E9D5DA;
+}
+#enterPage .logo {
+  position: relative;
+  width: 80%;
+  margin-bottom: 50px;
+}
+#enterPage .logo img {
+  width: 100%;
+}
+#enterPage .logo .backBubble {
+  width: 100%;
+  height: 100%;
+}
+#enterPage .logo .backBubble span {
+  position: absolute;
+}
+#enterPage .logo .backBubble span::before {
+  content: "";
+  width: 100%;
+  display: block;
+  padding-top: 100%;
+  background-color: #827397;
+  border-radius: 50%;
+}
+#enterPage .logo .backBubble span:nth-child(1) {
+  width: 40%;
+  opacity: 0.6;
+  left: -6%;
+  bottom: -2%;
+}
+#enterPage .logo .backBubble span:nth-child(2) {
+  width: 30%;
+  opacity: 0.4;
+  left: -10%;
+  bottom: -18%;
+}
+#enterPage .logo .backBubble span:nth-child(3) {
+  width: 15%;
+  opacity: 0.2;
+  left: -20%;
+  bottom: -5%;
+}
+#enterPage .logo .backBubble span:nth-child(4) {
+  width: 35%;
+  opacity: 0.5;
+  right: 0%;
+  top: -2%;
+}
+#enterPage .logo .backBubble span:nth-child(5) {
+  width: 28%;
+  opacity: 0.4;
+  right: -7%;
+  top: -20%;
+}
+#enterPage .logo .backBubble span:nth-child(6) {
+  width: 20%;
+  opacity: 0.2;
+  right: -24%;
+  top: -17%;
+}
+#enterPage h1 {
+  min-width: 200px;
+  width: 60%;
+  text-align: center;
+}
+
+/*=================== home ===================*/
+header {
+  background: #827397;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+header h1 {
+  color: #E9D5DA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 img {
+  height: 30px;
+  object-fit: contain;
+}
+header h1 span {
+  font-size: 20px;
+  transform: translateY(-5px);
+}
+
+main {
+  width: 100%;
+  padding: 50px 0;
+}
+main .inner {
+  padding: 10px 0;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+main #calendar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main #calendar .days {
+  display: flex;
+  text-align: center;
+  background: #827397;
+  color: #E9D5DA;
+}
+main #calendar .days .day {
+  width: 14.2857142857%;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+main #calendar .days .day:nth-child(7n) {
+  color: rgb(98, 166, 255);
+}
+main #calendar .days .day:nth-child(7n+1) {
+  color: rgb(255, 129, 129);
+}
+main #calendar .dates {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  background: #fff;
+  border: 2px solid #827397;
+}
+main #calendar .dates .date {
+  width: 14.2857142857%;
+  height: 16.6666666667%;
+  padding: 0.3rem;
+  border-bottom: 1px dashed #827397;
+  border-left: 1px dashed #827397;
+}
+main #calendar .dates .date:nth-child(7n) {
+  color: rgb(98, 166, 255);
+}
+main #calendar .dates .date:nth-child(7n+1) {
+  color: rgb(255, 129, 129);
+  border-left: 0;
+}
+main #calendar .dates .date:nth-child(n+36) {
+  border-bottom: 0;
+}
+main #calendar .dates .date .num {
+  display: inline-block;
+  width: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+main #calendar .dates .date.today .num span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  font-weight: 700;
+}
+main #calendar .dates .date.today .num span::before {
+  content: "";
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #E9D5DA;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 50%;
+  filter: saturate(200%);
+}
+main #calendar .dates .date.other .num {
+  opacity: 0.5;
+}
+main #contentsBtn {
+  width: 100%;
+  height: 200px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  flex-shrink: 0;
+}
+main #contentsBtn article {
+  background-color: white;
+  border: 2px solid #827397;
+  padding: 0.5rem;
+  width: calc((100% - 20px) / 2);
+  height: calc((100% - 20px) / 2);
+}
+main #contentsBtn article h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+main #contentsBtn article .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+main #contentsBtn article .title h2 {
+  font-weight: 700;
+  margin: 0;
+}
+main #contentsBtn article .title button {
+  background: transparent;
+}
+main #contentsBtn article .contents li {
+  padding-left: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  position: relative;
+}
+main #contentsBtn article .contents li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  background: url(../assets/img/dot.png) no-repeat center/cover;
+}
+main #contentsBtn article.timeTable {
+  height: calc((100% - 20px) * 2 / 3);
+}
+main #contentsBtn article.todoList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc((100% - 20px) / 3);
+}
+main #contentsBtn article.todoList h2 {
+  margin: 0;
+}
+
+footer {
+  z-index: 5;
+  background: #827397;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+footer button {
+  height: 50px;
+  background: transparent;
+}
+footer button img {
+  height: 100%;
+}
+
+/*=================== d-day ===================*/
+#d-dayPage {
+  background: #E9D5DA;
+}
+#d-dayPage .d-daySection {
+  background-color: white;
+  border: 2px solid #827397;
+  padding: 0.5rem;
+}
+#d-dayPage .d-daySection h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#d-dayPage .d-daySection .d-dayList li {
+  display: flex;
+  align-items: center;
+}
+#d-dayPage .d-daySection .d-dayList li h3 {
+  flex: 1;
+  padding-left: 1.5rem;
+  position: relative;
+}
+#d-dayPage .d-daySection .d-dayList li h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  background: url(../assets/img/dot.png) no-repeat center/cover;
+}
+#d-dayPage .d-daySection .d-dayList li span {
+  margin: 0.5rem;
+}
+#d-dayPage #addD-dayItemBtn {
+  float: right;
+  padding: 0.5rem;
+  background: transparent;
+  transform: translateX(0.5rem);
+  font-weight: 700;
+}
+#d-dayPage #d-dayPopup {
+  background-color: white;
+  border: 2px solid #827397;
+  padding: 0.5rem;
+}
+#d-dayPage #d-dayPopup h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#d-dayPage #d-dayPopup h2 {
+  margin-bottom: 1rem;
+}
+#d-dayPage #d-dayPopup form #d-dayTitle {
+  width: 100%;
+  font-size: 1.25rem;
+  border: 0;
+  color: #827397;
+  padding: 0.3rem;
+}
+#d-dayPage #d-dayPopup form #d-dayTitle::placeholder {
+  color: #E9D5DA;
+}
+#d-dayPage #d-dayPopup form hr {
+  margin: 0.5rem 0;
+  border: 0;
+  border-top: 1px solid #827397;
+}
+#d-dayPage #d-dayPopup form .wrap {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+#d-dayPage #d-dayPopup form .wrap label {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+#d-dayPage #d-dayPopup form .wrap label img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#d-dayPage #d-dayPopup form .wrap #d-dayDatepicker {
+  flex: 1;
+  border: 1px solid #827397;
+  width: 100%;
+  position: relative;
+  color: #827397;
+  padding: 0.3rem;
+  text-align: center;
+}
+#d-dayPage #d-dayPopup form .wrap #d-dayDatepicker::placeholder {
+  color: #E9D5DA;
+}
+
+/*=================== todoList ===================*/
+#todoListPage {
+  background: rgb(244, 205, 99);
+}
+
+/*=================== today ===================*/
+#todayPage {
+  background: rgb(196, 154, 220);
+}
+
+/*=================== timer ===================*/
+#timeTablePage {
+  background: rgb(188, 224, 171);
+}
+
+/*=================== main ===================*/
+#mobileContainer {
+  min-width: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #E9D5DA;
+  color: #827397;
+  height: 100%;
+  position: relative;
+}
+
+#d-dayPage,
+#todayPage,
+#todoListPage,
+#timeTablePage {
+  z-index: 3;
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  transform: translateX(-50%);
+  height: calc(100% - 100px);
+  min-height: 0;
+  position: fixed;
+  left: 50%;
+  top: 100%;
+  transition: all 0.5s;
+  background: #E9D5DA;
+  color: #827397;
+}
+
+#timeTablePage {
+  z-index: 4;
+}
+
+aside {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
