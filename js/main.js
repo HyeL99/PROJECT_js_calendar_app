@@ -1,35 +1,95 @@
-/*
-  datepicker https://its-easy.tistory.com/12
-*/
-$(function(){
-  $('#d-dayPage .deleteD-day').on('click',function(){
-    const $li = $(this).parent('li');
-    deleteItemId = $li.attr('id')
-    console.log(deleteItemId);
-    /*가져온 json 배열을 수정하고 다시 업로드하는 코드 필요*/
-    $li.remove();
-  })
+let dataList = {
+  "date": [
+    {
+      "date":"2022-11-15",
+      "plan" : "러프스케치 마감",
+      "timeTable":[
+        {
+          "topic":"topic01",
+          "startTime":"2022-11-15 09:00:00",
+          "endTime":"2022-11-15 12:30:00"
+        },
+        {
+          "topic":"topic02",
+          "startTime":"2022-11-15 13:08:00",
+          "endTime":"2022-11-15 15:27:00"
+        },
+        {
+          "topic":"topic01",
+          "startTime":"2022-11-15 17:16:00",
+          "endTime":"2022-11-15 20:00:00"
+        }
+      ],
+      "record":{
+        "img":"",
+        "story":"2022-11-15 오늘의 일기"
+      }
+    },
+    {
+      "date":"2022-11-16",
+      "timeTable":[
+        {
+          "topic":"topic02",
+          "startTime":"2022-11-16 09:00:00",
+          "endTime":"2022-11-16 12:30:00"
+        },
+        {
+          "topic":"topic03",
+          "startTime":"2022-11-16 13:08:00",
+          "endTime":"2022-11-16 16:27:00"
+        },
+        {
+          "topic":"topic03",
+          "startTime":"2022-11-16 17:16:00",
+          "endTime":"2022-11-16 20:00:00"
+        }
+      ]
+    }
+  ],
+  "d-day": [
+    {
+      "name":"종강😊",
+      "date":"2023-01-03"
+    }
+  ],
+  "todoList": [
+    {
+      "id": 1,
+      "name":"1번 투두리스트",
+      "done":false
+    },
+    {
+      "id": 2,
+      "name":"2번 투두리스트",
+      "done":true
+    },
+    {
+      "id": 3,
+      "name":"3번 투두리스트",
+      "done":false
+    },
+    {
+      "id": 4,
+      "name":"4번 투두리스트",
+      "done":false
+    }
+  ],
+  "topic": ["topic01","topic02","topic03"],
+  "holiday":[]
+}
 
-  // datepicker 설정
-  $.datepicker.setDefaults({
-    dateFormat: 'yy-mm-dd',
-    showOtherMonths: true,
-    showMonthAfterYear:true,
-    changeYear: true,
-    changeMonth: true,
-    yearSuffix: "년",
-    monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-    dayNamesMin: ['일','월','화','수','목','금','토'],
-    dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
-    yearRange:"2002:2042"
-  })
-  console.log($.datepicker);
-  
-  $("#d-dayDatepicker").datepicker()
-  $('#addD-dayItemBtn').on('click',function(){
-    //#d-dayPopup이 보여야함
-  })
 
-  $('#datepicker').datepicker('setDate', 'today');
-})
+
+
+
+
+
+
+//localStorage.setItem('myTimeItems',JSON.stringify(dataList));
+// $(function(){
+//   let dataList = JSON.parse(localStorage.getItem('myTimeItems'));
+//   if(!dataList.holiday){
+//     dataList = {...dataList,holiday:holidayList}
+//   }
+//   console.log(dataList);
+// });
