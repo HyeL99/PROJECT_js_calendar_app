@@ -35,12 +35,19 @@ main{
     overflow-y: auto;
     .year-month{
       display: flex;
+      justify-content: space-between;
       #selectYear{
         position: relative;
         display: flex;
+        align-items: center;
         .selectYearWrap{
           input:disabled{
-            min-width: 0;
+            font-size: 1rem;
+            line-height: 1;
+            width: 3rem;
+            text-align: center;
+            background: transparent;
+            border: 0;
           }
           #selectYearList{
             position: absolute;
@@ -48,10 +55,13 @@ main{
             top: 30px;
             width: calc(100% - 1rem);
             border-top: 1px solid $subColor;
-            max-height: 200px;
+            max-height: calc(7rem + 6px);
             overflow-y: auto;
+            z-index: 1;
             li{
               @include SetBox;
+              padding:0.2rem 0;
+              text-align: center;
               border-top: 0;
             }
           }
@@ -60,19 +70,30 @@ main{
       #selectMonth{
         position: relative;
         display: flex;
+        align-items: end;
         .selectMonthWrap{
-          input:disabled{}
+          input:disabled{
+            font-size: 1.8rem;
+            width: 2.4rem;
+            height: 1.8rem;
+            text-align: center;
+            background: transparent;
+            border: 0;
+          }
           #selectMonthList{
             position: absolute;
             left:0;
-            top: 30px;
+            top: 2rem;
             width: calc(100% - 1rem);
             border-top: 1px solid $subColor;
-            max-height: 200px;
+            max-height: calc(7rem + 6px);
             overflow-y: auto;
+            z-index: 1;
             li{
               @include SetBox;
               border-top: 0;
+              padding:0.2rem 0;
+              text-align: center;
             }
           }
         }
