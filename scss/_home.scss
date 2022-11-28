@@ -33,6 +33,51 @@ main{
     flex-direction: column;
     row-gap: 20px;
     overflow-y: auto;
+    .year-month{
+      display: flex;
+      #selectYear{
+        position: relative;
+        display: flex;
+        .selectYearWrap{
+          input:disabled{
+            min-width: 0;
+          }
+          #selectYearList{
+            position: absolute;
+            left:0;
+            top: 30px;
+            width: calc(100% - 1rem);
+            border-top: 1px solid $subColor;
+            max-height: 200px;
+            overflow-y: auto;
+            li{
+              @include SetBox;
+              border-top: 0;
+            }
+          }
+        }
+      }
+      #selectMonth{
+        position: relative;
+        display: flex;
+        .selectMonthWrap{
+          input:disabled{}
+          #selectMonthList{
+            position: absolute;
+            left:0;
+            top: 30px;
+            width: calc(100% - 1rem);
+            border-top: 1px solid $subColor;
+            max-height: 200px;
+            overflow-y: auto;
+            li{
+              @include SetBox;
+              border-top: 0;
+            }
+          }
+        }
+      }
+    }
   }
   #calendar {
     width: 100%;
