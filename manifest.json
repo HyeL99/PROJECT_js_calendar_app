@@ -15,32 +15,32 @@
   "categories": [],
   "screenshots": [
     {
-      "src": "assets/screenshots/screenshot01.png",
+      "src": "assets/screenshots/screenshot1.png",
       "sizes": "1440x2960",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshot02.png",
+      "src": "assets/screenshots/screenshot2.png",
       "sizes": "1440x2960",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshot03.png",
+      "src": "assets/screenshots/screenshot3.png",
       "sizes": "1440x2960",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshot04.png",
+      "src": "assets/screenshots/screenshot4.png",
       "sizes": "1440x2960",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshot05.png",
+      "src": "assets/screenshots/screenshot5.png",
       "sizes": "1440x2960",
       "type": "image/png"
     },
     {
-      "src": "assets/screenshots/screenshot06.png",
+      "src": "assets/screenshots/screenshot6.png",
       "sizes": "1440x2960",
       "type": "image/png"
     }

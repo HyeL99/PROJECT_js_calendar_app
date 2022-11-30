@@ -32,7 +32,7 @@
 
   <script>
     if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('service-worker.js') //프로미스형태,등록
+      navigator.serviceWorker.register('sw.js') //프로미스형태,등록
         .then(function(success){
           console.log('serviceWorker install success😊 \n',success);
         })
