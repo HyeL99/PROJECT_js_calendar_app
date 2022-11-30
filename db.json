@@ -112,22 +112,22 @@ DB = {
     "todoList": [
       {
         "id": 1,
-        "name": "1번 투두리스트",
+        "name": "아이패드 충전",
         "done": false
       },
       {
         "id": 2,
-        "name": "2번 투두리스트",
+        "name": "아침 약 챙겨먹기",
         "done": true
       },
       {
         "id": 3,
-        "name": "3번 투두리스트",
+        "name": "물 1L 마시기",
         "done": false
       },
       {
         "id": 4,
-        "name": "4번 투두리스트",
+        "name": "일기 쓰기",
         "done": false
       }
     ],

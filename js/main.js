@@ -16,7 +16,6 @@ let nextDate = '';
 //dataList = response.json();
 let dataList = JSON.parse(JSON.stringify(DB));
 dataList = dataList.dataList;
-console.log('dataList',dataList)
 
 const holidayList = [ //설(1.1),추석(8.15),석가탄신일(4.8)
   {
@@ -896,7 +895,7 @@ const lunarDays = [ // 2015-2030 구현 완
 //================================== 실행 함수 ==================================//
 $(async function(){
   $('aside').on('click',function(){
-    $(this).css('top','100vh')
+    $(this).css('top','200vh')
   })
 
   const today = new Date();
