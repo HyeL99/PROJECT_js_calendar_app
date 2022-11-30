@@ -7,10 +7,16 @@
 //   console.log(dataList);
 
 // });
+
 let datalist = [];
 let prevDate = '';
 let nextDate = '';
-url='https://my-json-server.typicode.com/HyeL99/CalendarDB'
+//url='https://my-json-server.typicode.com/HyeL99/CalendarDB'
+//let response = fetch('db.json');
+//dataList = response.json();
+let dataList = JSON.parse(JSON.stringify(DB));
+dataList = dataList.dataList;
+console.log('dataList',dataList)
 
 const holidayList = [ //설(1.1),추석(8.15),석가탄신일(4.8)
   {
@@ -892,8 +898,6 @@ $(async function(){
   $('aside').on('click',function(){
     $(this).css('top','100vh')
   })
-  let response = await fetch(url);
-  dataList = await response.json();
 
   const today = new Date();
   const todayObject = getDateObject(today);
