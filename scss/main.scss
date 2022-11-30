@@ -66,5 +66,6 @@ aside {
   position: fixed;
   left:0;
   top:0;
-  display: none;
+  display: block;
+  transition: all 0.3s;
 }

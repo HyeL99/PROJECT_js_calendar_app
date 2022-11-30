@@ -10,12 +10,17 @@
       .date{
         text-align: center;
         margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
       }
       .timerContainer{
         display: flex;
         align-items: center;
         padding: 0.2rem 2rem;
         .left{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           .topic{
             font-size: 1rem;
             font-weight: 700;
@@ -63,10 +68,13 @@
               width: 100%;
               display: flex;
               justify-content: space-between;
+              line-height: 1.2rem;
               &::before{
+                top: 0.2rem;
                 background-image: url(../assets/img/play.png);
               }
-              span{}
+              .topic{}
+              .timer{}
             }
           }
         }
@@ -77,15 +85,18 @@
           display: flex;
           flex-direction: column;
           position: relative;
-          button{
+          button.edit{
             @include EditBtn;
           }
-          #timeLineList{
+          #timeLineListAll{
             flex:1;
             overflow-y: auto;
             height: 100%;
             min-height: 0;
             li{
+              &:last-child{
+                border-bottom: 1px solid $subColor;
+              }
               .top{
                 font-size: 0.9rem;
                 padding-left: 1.1rem;
@@ -93,13 +104,37 @@
                 justify-content: space-between;
                 margin-bottom: 0.5rem;
                 @include Dots;
-                span{}
+                border-top: 1px solid $subColor;
+                padding-top: 0.3rem;
+                &::before{
+                  top: 0.3rem;
+                }
+                button{
+                  font-size: 0.8rem;
+                }
               }
               .bottom{
                 font-size: 0.8rem;
                 opacity: 0.8;
-                .start{}
-                .end{}
+                hr{
+                  border: 0;
+                  border-top: 1px solid $subColor;
+                }
+                .itemPlace{
+                  position: relative;
+                  button{
+                    position: absolute;
+                    right:0;
+                    top:0.2rem;
+                    background: transparent;
+                  }
+                  .start{
+                    padding: 0.5rem 0 0.2rem;
+                  }
+                  .end{
+                    padding: 0.2rem 0 0.5rem;
+                  }
+                }
               }
             }
           }
@@ -184,6 +219,7 @@
             font-size: 1rem;
             line-height: 1.5rem;
             outline: 0;
+            min-width:0;
             &::placeholder{
               color: $mainColor;
             }
@@ -195,6 +231,8 @@
             line-height: 1.5rem;
             padding: 0.2rem 0.5rem;
             cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
           }
           .selectList{
             position: absolute;
