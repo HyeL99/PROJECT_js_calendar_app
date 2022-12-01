@@ -903,7 +903,6 @@ $(async function(){
 
   await renderCalendar(today);  //달력 불러옴
   getTodayList(todayObject);//오늘의 일정 불러오기(일정,공휴일)
-  getTodayTimeLine(todayObject);
   getYearList();  //year select list 불러옴
   updateCalendar(); //달력 업데이트 이벤트 추가
   openTimePage(todayObject.fullDate);
@@ -1762,22 +1761,6 @@ const getTodayList = (dayObject) => {
     listHTML += `<li>오늘 일정은 없습니다.</li>`;
   }
   $('#contentsBtn .day .contents').html(listHTML);
-}
-
-const getTodayTimeLine = (dayObject) => {
-  let listHTML = '';
-  let list = getTimeLi(dayObject.fullDate,'array');
-  console.log(list);
-  list.map((planName)=>{
-    listHTML += `<li>${planName}</li>`;
-  });
-  list.map(item => {
-    listHTML += `<li><span class='topic'>${item.topic}</span><span class='timer'>${item.time}</span></li>`;
-  });
-  if(listHTML.length == 0){
-    listHTML = '<li>아직 기록이 없습니다.</li>';
-  }
-  $('#contentsBtn .timeTable .contents').html(listHTML);
 }
 
 //타임라인 불러오는 함수
