@@ -81,17 +81,6 @@ var precacheConfig = [
   ["plugin/jQeury/jquery-ui.js", "737f98e90c65a378fe65f613893d287b"],
   ["plugin/timePicki/timePicki.css", "4b7c9d6b75a2f0cb2f9d1a1707cacde4"],
   ["plugin/timePicki/timePicki.js", "ae3bd2020ce00a117bc0ad64f44cae0f"],
-  ["scss/_common.scss", "b956a818ba88a3a56027885739e441c6"],
-  ["scss/_dDay.scss", "89ec3021c73bb1650f8fa013879ea78e"],
-  ["scss/_home.scss", "38a0423eed86d73da7d6902d0b3eafcd"],
-  ["scss/_index.scss", "e0bce4e51d4bc9182b84c5313af6e739"],
-  ["scss/_mixin.scss", "7e317c7c8366f513f6e2aa635480f3f9"],
-  ["scss/_reset.scss", "7405937a032d8f9a6c5fc935d564bad5"],
-  ["scss/_timer.scss", "af52bc972ded47439f6bdfcf3285a106"],
-  ["scss/_today.scss", "a96b76cdc4665d6c366a52b759057ac4"],
-  ["scss/_todoList.scss", "72b0b9f4444af80205279080f1022351"],
-  ["scss/_variable.scss", "025914f85091bae80c6c84753301f7c2"],
-  ["scss/main.scss", "debc4a21cee209017bb3f76cdafa455b"],
 ];
 var cacheName =
   "sw-precache-v3-sw-precache-" +
