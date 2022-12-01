@@ -1015,19 +1015,20 @@ const loadTimePage = (fullDate) => {
   $('#topicList').html(contentHtml);
   contentHtml = '';
 
-  if(selectedDay = getDateObject(new Date()).fullDate){
-    let articleHtml = '';
-    calculateTimeArray.map(item => {
-      if(item.time !== '00:00:00'){
-        articleHtml += `<li><span class='topic'>${item.topic}</span><span class='timer'>${item.time}</span></li>`;
-      }
-    });
-    if(articleHtml.length == 0){
-      articleHtml = `<li>아직 기록이 없습니다.</li>`;
+  todayArray = getTimeLi(getDateObject(new Date()).fullDate,'array');
+
+  let articleHtml = '';
+  todayArray.map(item => {
+    if(item.time !== '00:00:00'){
+      articleHtml += `<li><span class='topic'>${item.topic}</span><span class='timer'>${item.time}</span></li>`;
     }
-    $('#contentsBtn .timeTable .contents').html(articleHtml);
-    loadTimeLine(fullDate);
+  });
+  if(articleHtml.length == 0){
+    articleHtml = `<li>아직 기록이 없습니다.</li>`;
   }
+  $('#contentsBtn .timeTable .contents').html(articleHtml);
+  loadTimeLine(fullDate);
+
 
   $('#topicList li').on('click',function(){
     let selectedTitle = $(this).children('.topic').text();
