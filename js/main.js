@@ -1548,9 +1548,11 @@ const getYearList = () => {
 
   $('#selectYear button').on('click',function(){
     $('#selectYearList').slideToggle();
+    $('#selectMonthList').slideUp();
   });
   $('#selectMonth button').on('click',function(){
     $('#selectMonthList').slideToggle();
+    $('#selectYearList').slideUp();
   });
 };
 //달력 업데이트 이벤트
