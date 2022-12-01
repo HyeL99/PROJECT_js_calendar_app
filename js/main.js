@@ -1027,6 +1027,7 @@ const loadTimePage = (fullDate) => {
     articleHtml = `<li>아직 기록이 없습니다.</li>`;
   }
   $('#contentsBtn .timeTable .contents').html(articleHtml);
+  
   loadTimeLine(fullDate);
 
 
