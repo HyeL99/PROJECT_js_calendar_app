@@ -1,6 +1,6 @@
 # 일정 관리 앱 - 나의 시간
 
-<https://hyel99.github.io/CalendarApp/>
+<https://hyel99.github.io/PROJECT_js_calendar_app/>
 
 일정 관리에 관련된 정보를 한번에 관리할 수 있는 PWA 하이브리드 웹을 제작했습니다.
 
